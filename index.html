@@ -12,22 +12,19 @@
 
         html {
             scroll-behavior: smooth;
+            height: 100%;
+            padding: 0;
+            margin: 20;
         }
     </style>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
 </head>
 
 <body>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Tanner Rackow</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -36,104 +33,127 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#about-me">About Me</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link active" role="button" href="./assets/TannerRackowResume.pdf" download>View
+                        <a class="nav-link active" role="button" href="./assets/Tanner_Rackow_Resume.pdf" download>View
                             Resume</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div id="three"></div>
 
-    <script src="js/three.js"></script>
-    <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    <div class="bg-dark p-0 m-0" id="about-me">
+        <div class="container">
+            <div class="row justify-content-md-center pt-4">
+                <h1 class="col-md-auto text-white">About me</h1>
 
-        const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('three').appendChild(renderer.domElement);
-
-        const radius = 1;
-        const tube = .4;
-        const tubularSegments = 100;
-        const radialSegments = 8;
-
-        window.addEventListener('resize', () => {
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            camera.aspect = window.innerWidth / window.innerHeight;
-
-            camera.updateProjectionMatrix();
-        })
-
-
-
-
-        const geometry = new THREE.TorusKnotGeometry(radius, tube, tubularSegments, radialSegments, 2, 3);
-        const material = new THREE.MeshNormalMaterial({ wireframe: true });
-        const mesh = new THREE.Mesh(geometry, material);
-
-        scene.add(mesh);
-
-
-        const light = new THREE.PointLight(0xFFFFFF, 1, 500);
-        light.position.set(20, 10, 25);
-        scene.add(light);
-
-        camera.position.z = 5;
-
-        function animate() {
-            requestAnimationFrame(animate);
-
-
-            mesh.rotation.x += 0.02;
-            mesh.rotation.y += 0.01;
-            renderer.render(scene, camera);
-        }
-        animate();
-    </script>
-
-
-
-    <div class="container my-4" id="about-me">
-        <div class="row justify-content-md-center">
-            <h1 class="col-md-auto">About me</h1>
-        </div>
-        <div class="row my-4">
-            <div class="col-lg-4">
-                <h2>My Drive:</h2> <br>
-                <img src="./assets/img_20210807_184014240--1-.jpg" width="100%" class="image-thumbnail mb-4"
-                    alt="profile picture">
             </div>
-            <div class="col-lg-8">
-                As someone who has always loved tinkering with riddles and solving puzzles, my journey into Computer
-                Science has
-                cemented my passion for finding efficient solutions to cumbersome problems. I hope my journey forward
-                will lead me
-                toward joining technology focused organizations and elevating my skill set as a way to benefit my
-                communities and
-                workplaces.
-                <br><br>
-                Some of the things I have been working with lately include:
-                <br><br>
-                <ul>
-                    <li>A Reddit Clone using TypeScript, Next.js, React.js, Node.js, Redis, PostgreSQL, GraphQL,
-                        TypeORM, Chakra UI</li>
-                    <br>
-                    <li>E-Learning Lab using Django, Bootstrap</li>
-                </ul>
-                Check these out and many of my other projects on my <a href="https://github.com/iamTanTan">GitHub</a>
-            </div>
+            <div class="row my-4">
+                <div class="col-lg-4">
 
+                    <img src="./assets/img_20210807_184014240--1-.jpg" width="100%" class="image-thumbnail mb-4"
+                        alt="profile picture">
+                </div>
+                <div class="col-lg-8 text-white h5 pb-4">
+                    As someone who has always loved tinkering with riddles and solving puzzles, my journey into Computer
+                    Science has
+                    cemented my passion for finding efficient solutions to cumbersome problems. I hope my journey
+                    forward
+                    will lead me
+                    toward joining technology focused organizations and elevating my skill set as a way to benefit my
+                    communities and
+                    workplaces.
+                    <br><br>
+                    Some of the things I have been working with lately include:
+                    <br><br>
+                    <ul>
+                        <li>A Recipe App using Swift UI</li>
+                        <br>
+                        <li>A Reddit Clone using TypeScript, Next.js, React.js, Node.js, Redis, PostgreSQL, GraphQL,
+                            TypeORM, Chakra UI</li>
+                        <br>
+                        <li>E-Learning Lab using Django, Bootstrap</li>
+                    </ul>
+                    Check these out and many of my other projects on my <a
+                        href="https://github.com/iamTanTan">GitHub</a>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
+<script src="js/three.js"></script>
+<script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('three').appendChild(renderer.domElement);
+
+    const radius = 1;
+    const tube = .4;
+    const tubularSegments = 100;
+    const radialSegments = 8;
+
+    window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+
+        camera.updateProjectionMatrix();
+    })
+
+    const verticesOfCube = [
+        -1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1,
+        -1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1,
+    ];
+
+    const indicesOfFaces = [
+        2, 1, 0, 0, 3, 2,
+        0, 4, 7, 7, 3, 0,
+        0, 1, 5, 5, 4, 0,
+        1, 2, 6, 6, 5, 1,
+        2, 3, 7, 7, 6, 2,
+        4, 5, 6, 6, 7, 4
+    ];
+
+    const geometry = new THREE.PolyhedronGeometry(verticesOfCube, indicesOfFaces, 6, 2);
+
+    const material = new THREE.MeshNormalMaterial({ wireframe: false });
+    const mesh = new THREE.Mesh(geometry, material);
+
+
+
+    const geometry2 = new THREE.PolyhedronGeometry(verticesOfCube, indicesOfFaces, 8, 4);
+
+    const material2 = new THREE.MeshNormalMaterial({ wireframe: true });
+    const mesh2 = new THREE.Mesh(geometry2, material2);
+
+    scene.add(mesh);
+    scene.add(mesh2);
+
+    const light = new THREE.PointLight(0xFFFFFF, 1, 500);
+    light.position.set(20, 10, 25);
+    scene.add(light);
+
+    camera.position.z = 15;
+
+    function animate() {
+        requestAnimationFrame(animate);
+        mesh.rotation.x += 0.02;
+        mesh.rotation.y += 0.01;
+
+        mesh2.rotation.x -= 0.02;
+        mesh2.rotation.y += 0.01;
+
+
+        renderer.render(scene, camera);
+    }
+    animate();
+</script>
 
 </html>
