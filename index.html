@@ -5,95 +5,114 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Tanner Rackow Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            height: 100%;
-            padding: 0;
-            margin: 20;
-        }
-    </style>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Tanner Rackow</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#about-me">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" role="button" href="./assets/Tanner_Rackow_Resume.pdf" download>View
-                            Resume</a>
-                    </li>
-                </ul>
+
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <!-- <div class="absolute inset-y-0 left-0 flex items-center sm:hidden"> -->
+                <!-- Mobile menu button-->
+                <!-- <button type="button"
+                        class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        
+            Icon when menu is closed.
+
+            Heroicon name: outline/bars-3
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+                <!-- <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg> -->
+                <!--
+            Icon when menu is open.
+
+            Heroicon name: outline/x-mark
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+                <!-- <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div> -->
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <div class="text-white text-lg">Tanner Rackow</div>
+                    </div>
+                    <div class="hidden sm:block sm:ml-auto">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <!-- <a href="#projects"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                aria-current="page">Projects</a>
+
+
+                            <a href="#about-me"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About
+                                Me</a> -->
+
+                            <a href="./assets/Tanner_Rackow_Resume.pdf" download
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">View
+                                Resume</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+
+
+                <!-- <a href="#projects"
+                    class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+
+                <a href="#about-me"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About
+                    Me</a> -->
+
+                <a href="./assets/Tanner_Rackow_Resume.pdf" download
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">View
+                    Resume</a>
+
+
             </div>
         </div>
     </nav>
 
+
     <div id="three"></div>
 
-    <div class="bg-dark p-0 m-0" id="about-me">
-        <div class="container">
-            <div class="row justify-content-md-center pt-4">
-                <h1 class="col-md-auto text-white">About me</h1>
 
-            </div>
-            <div class="row my-4">
-                <div class="col-lg-4">
-
-                    <img src="./assets/img_20210807_184014240--1-.jpg" width="100%" class="image-thumbnail mb-4"
-                        alt="profile picture">
-                </div>
-                <div class="col-lg-8 text-white h5 pb-4">
-                    As someone who has always loved tinkering with riddles and solving puzzles, my journey into Computer
-                    Science has
-                    cemented my passion for finding efficient solutions to cumbersome problems. I hope my journey
-                    forward
-                    will lead me
-                    toward joining technology focused organizations and elevating my skill set as a way to benefit my
-                    communities and
-                    workplaces.
-                    <br><br>
-                    Some of the things I have been working with lately include:
-                    <br><br>
-                    <ul>
-                        <li>A Recipe App using Swift UI</li>
-                        <br>
-                        <li>A Reddit Clone using TypeScript, Next.js, React.js, Node.js, Redis, PostgreSQL, GraphQL,
-                            TypeORM, Chakra UI</li>
-                        <br>
-                        <li>E-Learning Lab using Django, Bootstrap</li>
-                    </ul>
-                    Check these out and many of my other projects on my <a
-                        href="https://github.com/iamTanTan">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 <script src="js/three.js"></script>
 <script>
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const navbar = document.getElementsByTagName("nav")[0]
+    console.log("nav", navbar)
+    const camera = new THREE.PerspectiveCamera(135, window.innerWidth / (window.innerHeight - navbar.offsetHeight), 0.1, 1000);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+
+
+
+    renderer.setSize(window.innerWidth, window.innerHeight - navbar.offsetHeight);
     document.getElementById('three').appendChild(renderer.domElement);
+
+
 
     const radius = 1;
     const tube = .4;
@@ -101,8 +120,8 @@
     const radialSegments = 8;
 
     window.addEventListener('resize', () => {
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        camera.aspect = window.innerWidth / window.innerHeight;
+        renderer.setSize(window.innerWidth, (window.innerHeight - navbar.offsetHeight));
+        camera.aspect = window.innerWidth / (window.innerHeight - navbar.offsetHeight);
 
         camera.updateProjectionMatrix();
     })
@@ -122,14 +141,10 @@
     ];
 
     const geometry = new THREE.PolyhedronGeometry(verticesOfCube, indicesOfFaces, 6, 2);
-
     const material = new THREE.MeshNormalMaterial({ wireframe: false });
     const mesh = new THREE.Mesh(geometry, material);
 
-
-
     const geometry2 = new THREE.PolyhedronGeometry(verticesOfCube, indicesOfFaces, 8, 4);
-
     const material2 = new THREE.MeshNormalMaterial({ wireframe: true });
     const mesh2 = new THREE.Mesh(geometry2, material2);
 
@@ -137,10 +152,12 @@
     scene.add(mesh2);
 
     const light = new THREE.PointLight(0xFFFFFF, 1, 500);
-    light.position.set(20, 10, 25);
+    light.position.set(20, 5, 25);
     scene.add(light);
 
     camera.position.z = 15;
+    let moves = 0;
+    let direction = 0.02
 
     function animate() {
         requestAnimationFrame(animate);
@@ -150,6 +167,18 @@
         mesh2.rotation.x -= 0.02;
         mesh2.rotation.y += 0.01;
 
+        if (moves === 1500) {
+            direction = -1 * direction
+
+        }
+
+        else if (moves === -1500) {
+            direction = -1 * direction
+
+        }
+        mesh.position.x += direction
+        mesh.position.y += direction * 0.4
+        moves += direction * 100
 
         renderer.render(scene, camera);
     }
